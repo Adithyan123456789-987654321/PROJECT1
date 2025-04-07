@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML & CSS Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .quiz-container {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            padding: 10px;
+            background: #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input.correct:checked + label {
+            background-color: lightgreen;
+        }
+        input.incorrect:checked + label {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>HTML & CSS Quiz</h2>
+        <div class="question">1. What does HTML stand for?</div>
+        <div class="options">
+            <input type="radio" id="q1a1" name="q1" class="incorrect">
+            <label for="q1a1">Hyper Text Managing Links</label>
+
+            <input type="radio" id="q1a2" name="q1" class="correct">
+            <label for="q1a2">Hyper Text Markup Language</label>
+
+            <input type="radio" id="q1a3" name="q1" class="incorrect">
+            <label for="q1a3">Home Tool Markup Language</label>
+        </div>
+        <div class="question">2. Which CSS property is used to change text color?</div>
+        <div class="options">
+            <input type="radio" id="q2a1" name="q2" class="correct">
+            <label for="q2a1">color</label>
+
+            <input type="radio" id="q2a2" name="q2" class="incorrect">
+            <label for="q2a2">text-style</label>
+
+            <input type="radio" id="q2a3" name="q2" class="incorrect">
+            <label for="q2a3">font-color</label>
+        </div>
+        <div class="question">3. What is the correct way to apply an external CSS file?</div>
+        <div class="options">
+            <input type="radio" id="q3a1" name="q3" class="correct">
+            <label for="q3a1">&lt;link rel="stylesheet" href="style.css"&gt;</label>
+
+            <input type="radio" id="q3a2" name="q3" class="incorrect">
+            <label for="q3a2">&lt;style src="style.css"&gt;</label>
+
+            <input type="radio" id="q3a3" name="q3" class="incorrect">
+            <label for="q3a3">&lt;css-file&gt;style.css&lt;/css-file&gt;</label>
+        </div>
+
+    </div>
+
+</body>
+</html>
