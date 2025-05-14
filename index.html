@@ -1,135 +1,160 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body{
-                background-image:url("prjimg2.jpg");
-                background-repeat: no-repeat;
-                background-size:cover ;
-            }
-            h1{
-                font-family: "lucida handwriting";
-            }
-  
-            
-          
-            
-        
-            .header {
-  font-family:cursive;                        
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color:black;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.li1 {
-  float:right;
-}
+    body {
+      background-image: url("prjimg2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: sans-serif;
+      color: white;
+    }
 
-.li1 a {
-  display: block;
-  color: rgb(252, 252, 252);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    h1 {
+      font-family: "Lucida Handwriting", cursive;
+      text-align: center;
+      margin-top: 100px;
+    }
 
-.li1 a:hover {
-  background-color:rgb(20, 166, 10);
-}
-.link {
-  font-family:cursive;                        
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow:auto;
-  background-color:transparent;
-  position: fixed;
-  top: 400px;
-  width: 100%;
-}
-.li2 a{
-  display: block;
-  color: rgb(252, 252, 252);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    h4 {
+      font-family: cursive;
+      text-align: center;
+      margin: 20px;
+    }
 
-.li2 a:hover {
-color:rgb(74, 189, 74);
-}
-.footer {
-  font-family:cursive;                        
-  list-style-type:none;
-  margin: 0;
-  padding: 0;
-  overflow:auto;
-  background-color:transparent;
-  position:fixed;
-  bottom:0;
-  width: 100%;
-}
-.li3 a{
-  display: block;
-  color: rgb(252, 252, 252);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration:none;
-}
-.li3 a:hover {
-  background-color:rgb(7, 7, 7);
-}
-.li3 {
-  float:right;
-}
-h4{
-    font-family:"";
-    color: aliceblue;
-    text-align: center;
-}
-.main{
-float:right;
-}
-        </style>
-    </head>
-    <body>
-<ul class="header">
-        <li class="li1"><a href="suggetions.html">suggestions</a></li>
-        <li class="li1"><a href="aboutme.html">About</a></li>
-        <li class="li1"><a href="contact.html">Contact</a></li>
-        <li class="li1"><a href="">Home</a></li>
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
 
-    </ul><br><br><br><br>
-    <h1 style="text-align:center;color: aliceblue;">Portfolio By Adithyan.</h1>
-    <br>
-    <br>
-    <h4><i>This a a project portfolio by adithyan,amritha viswavidyaapeedam,amritapuri,kollam.<br>
-        I created this responsive websites that showcases all my projects what i did before<br>
-        my midsemester and this responsive website gives all my contact details and also gives<br>
-        you an option to give suggetions about my website.This website also redirects you to <br>
-        your faviourite shopping app or your faviourite social media app.You can also attend <br>
-        an html quiz here.</i></h4><br>
+    .header a {
+      display: block;
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
+    .header a:hover {
+      background-color: rgb(20, 166, 10);
+    }
 
-        <ul class="link">
-          <li class="li2"><a href="acad.html">ACCADEMIC WORKS</a></li>
-          <li class="li2"><a href="project.html">SHOPPING APPS</a></li>
-          <li class="li2"><a href="social.html">SOCIAL MEDIA APPS</a></li>
-          <li class="li2"><a  href="quiz.html">HTML AND CSS QUIZ</a></li><br>
-    
-      </ul>
-<ul class="footer">
-  <li class="li3"><a href="mailto:adithyan8590350621@gmail.com" target="_self"><img src="gm.png" width="40" height="40"></a></li>
-  <li class="li3"><a href="https://wa.me/8590350621" target="_blank"><img src="wh.png" width="40" height="40"></a></li>
-  <li class="li3"><a  href="https://www.instagram.com/4d11h?igsh=b3Y0YWhzY3Jlbnc1" target="_blank"><img src="ig.png" width="40" height="40"></a></li>
-</ul>
-</body>   
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 50px;
+      gap: 10px;
+    }
+
+    .link a {
+      color: white;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-family: cursive;
+    }
+
+    .link a:hover {
+      color: rgb(74, 189, 74);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    .footer a img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .link {
+        top: auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin-top: 120px;
+      }
+
+      h4 {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+
+      .link a {
+        width: 90%;
+        text-align: center;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="header">
+    <a href="">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="aboutme.html">About</a>
+    <a href="suggestions.html">Suggestions</a>
+  </nav>
+
+  <h1>Portfolio By Adithyan</h1>
+
+  <h4>
+    <i>
+      This is a project portfolio by Adithyan, Amrita Vishwa Vidyapeetham, Amritapuri, Kollam.<br>
+      I created this responsive website to showcase all my projects before my midsemester.<br>
+      It includes contact details, suggestion options, shopping & social app links, and an HTML quiz.
+    </i>
+  </h4>
+
+  <div class="link">
+    <a href="acad.html">Academic Works</a>
+    <a href="project.html">Shopping Apps</a>
+    <a href="social.html">Social Media Apps</a>
+    <a href="quiz.html">HTML and CSS Quiz</a>
+  </div>
+
+  <footer class="footer">
+    <a href="mailto:adithyan8590350621@gmail.com" target="_self"><img src="gm.png" alt="Email"></a>
+    <a href="https://wa.me/8590350621" target="_blank"><img src="wh.png" alt="WhatsApp"></a>
+    <a href="https://www.instagram.com/4d11h?igsh=b3Y0YWhzY3Jlbnc1" target="_blank"><img src="ig.png" alt="Instagram"></a>
+  </footer>
+
+</body>
 </html>
