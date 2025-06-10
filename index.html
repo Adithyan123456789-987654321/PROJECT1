@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * {
       box-sizing: border-box;
@@ -14,112 +14,141 @@
       background-image: url("prjimg2.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
       font-family: sans-serif;
       color: white;
+      min-height: 100vh;
+      padding-top: 60px;
     }
 
-    h1 {
-      font-family: "Lucida Handwriting", cursive;
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    h4 {
-      font-family: cursive;
-      text-align: center;
-      margin: 20px;
-    }
-
-    .header {
+    nav.header {
       display: flex;
       justify-content: flex-end;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.85);
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 100;
+      flex-wrap: wrap;
     }
 
     .header a {
-      display: block;
       color: white;
-      padding: 14px 16px;
+      padding: 14px 20px;
       text-decoration: none;
+      font-size: 1em;
+      transition: background 0.3s;
     }
 
     .header a:hover {
       background-color: rgb(20, 166, 10);
     }
 
+    h1 {
+      font-family: "Lucida Handwriting", cursive;
+      text-align: center;
+      margin: 2em 1em 0.5em;
+      font-size: 2em;
+    }
+
+    h4 {
+      text-align: center;
+      margin: 0 10% 1.5em;
+      font-size: 1em;
+      font-family: cursive;
+      line-height: 1.6;
+    }
+
     .link {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      margin-top: 50px;
-      gap: 10px;
+      gap: 15px;
+      padding: 1em;
     }
 
     .link a {
-      color: white;
-      text-decoration: none;
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
+      color: white;
+      padding: 12px 24px;
       border-radius: 10px;
+      text-decoration: none;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
       font-family: cursive;
+      font-size: 1.1em;
+      transition: color 0.3s, background 0.3s;
     }
 
     .link a:hover {
       color: rgb(74, 189, 74);
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .footer {
+    footer.footer {
       display: flex;
       justify-content: center;
       gap: 20px;
+      padding: 20px 0;
       position: fixed;
-      bottom: 10px;
+      bottom: 0;
       width: 100%;
-      background-color: transparent;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .footer a img {
       width: 40px;
       height: 40px;
+      transition: transform 0.3s;
     }
 
-    /* RESPONSIVE STYLES */
+    .footer a:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Responsive Styles */
     @media (max-width: 768px) {
-      .header {
+      nav.header {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .link {
-        top: auto;
-        padding: 20px;
-      }
-
       h1 {
         font-size: 1.5em;
-        margin-top: 120px;
       }
 
       h4 {
-        font-size: 1em;
-        padding: 0 10px;
+        font-size: 0.95em;
+        margin: 0 5% 1.5em;
       }
 
       .link a {
-        width: 90%;
-        text-align: center;
+        font-size: 1em;
       }
 
       .footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        bottom: 20px;
+        padding-bottom: 30px;
+      }
+
+      .footer a img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .link a {
+        width: 90%;
+        font-size: 0.95em;
+      }
+
+      .header a {
+        font-size: 0.9em;
+        padding: 10px 14px;
       }
     }
   </style>
@@ -127,7 +156,7 @@
 <body>
 
   <nav class="header">
-    <a href="">Home</a>
+    <a href="#">Home</a>
     <a href="contact.html">Contact</a>
     <a href="aboutme.html">About</a>
     <a href="suggetions.html">Suggestions</a>
@@ -137,8 +166,8 @@
 
   <h4>
     <i>
-      This is a project portfolio by Adithyan, Amrita Vishwa Vidyapeetham, Amritapuri, Kollam.<br>
-      I created this responsive website to showcase all my projects before my midsemester.<br>
+      This is a project portfolio by Adithyan, Amrita Vishwa Vidyapeetham, Amritapuri, Kollam.<br />
+      I created this responsive website to showcase all my projects before my midsemester.<br />
       It includes contact details, suggestion options, shopping & social app links, and an HTML quiz.
     </i>
   </h4>
@@ -151,9 +180,9 @@
   </div>
 
   <footer class="footer">
-    <a href="mailto:adithyan8590350621@gmail.com" target="_self"><img src="gm.png" alt="Email"></a>
-    <a href="https://wa.me/8590350621" target="_blank"><img src="wh.png" alt="WhatsApp"></a>
-    <a href="https://www.instagram.com/4d11h?igsh=b3Y0YWhzY3Jlbnc1" target="_blank"><img src="ig.png" alt="Instagram"></a>
+    <a href="mailto:adithyan8590350621@gmail.com"><img src="gm.png" alt="Email" /></a>
+    <a href="https://wa.me/8590350621" target="_blank"><img src="wh.png" alt="WhatsApp" /></a>
+    <a href="https://www.instagram.com/4d11h?igsh=b3Y0YWhzY3Jlbnc1" target="_blank"><img src="ig.png" alt="Instagram" /></a>
   </footer>
 
 </body>
